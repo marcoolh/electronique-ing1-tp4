@@ -4,7 +4,7 @@ E6. Dessiner une jauge à l'écran proportionnelle à la tension entre 0 et 3,3 
 combinaison binaire sur 12 bits obtenue en sortie du convertisseur analogique - numérique.
 Le rendu final devrait ressembler à ce qui est présenté sur la Figure 4.2.
 
-Exemple:
+Fig. 4.2
 
 ![Exemple](/doc/img/example.png)
 
