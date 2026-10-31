@@ -5,6 +5,7 @@ combinaison binaire sur 12 bits obtenue en sortie du convertisseur analogique - 
 Le rendu final devrait ressembler à ce qui est présenté sur la Figure 4.2.
 
 Exemple:
+
 ![Exemple](/doc/img/example.png)
 
 ## Montage
