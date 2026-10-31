@@ -10,6 +10,8 @@
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
 int sensorPin = 1; // Utilisation du GPIO 1 (ADC)
+int reading = 0;
+float voltage = 0;
 
 
 void setup() {
@@ -22,5 +24,10 @@ void setup() {
 }
 
 void loop() {
-  
+  //Leture de la tension analogique
+  reading = analogRead(sensorPin);
+  // Calcul de la tension (3.3V max et 4096 états)
+  voltage = reading * 3.3 / 4096.0;
+  Serial.println("Tension: " + String(voltage, 2)); // Affichage de la tension avec 2 décimales
+  delay(800);
 }
