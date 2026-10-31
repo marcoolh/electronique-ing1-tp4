@@ -30,10 +30,11 @@ void loop() {
   reading = analogRead(sensorPin);
   // Calcul de la tension (3.3V max et 4096 états)
   voltage = reading * 3.3 / 4096.0;
-  ratio = voltage / 3.3; // Ratio entre la puissance actuelle et maximale
-  angle = 360 * (1 - ratio); // Angle dans le sens horaire
 
-  Serial.println("Tension: " + String(voltage, 2)); // Affichage de la tension avec 2 décimales
-  Serial.println("Angle: " + String(angle, 0) + "°\n");
+  display.clearDisplay();
+  display.setTextSize(5);
+  display.setCursor(0, 0);
+  display.println(String(voltage, 0) + "V");
+  display.display();
   delay(800);
 }
