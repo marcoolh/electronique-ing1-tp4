@@ -23,6 +23,7 @@ void setup() {
     Serial.println(F("SSD1306 allocation failed"));
     for(;;);
   }
+  delay(2000); // On attend pour assurer l'initialisation correcte de l'écran
 }
 
 void loop() {
@@ -32,9 +33,10 @@ void loop() {
   voltage = reading * 3.3 / 4096.0;
 
   display.clearDisplay();
-  display.setTextSize(5);
-  display.setCursor(0, 0);
-  display.println(String(voltage, 0) + "V");
+  display.setTextSize(4);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 20);
+  display.println(String(voltage, 2) + "V");
   display.display();
   delay(800);
 }
