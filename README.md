@@ -13,3 +13,7 @@ Exemple:
 ![Neuroboard](/doc/img/neuroboard_potentiometer_oled.png)
 
 ![ESP32](/doc/img/esp32_potentiometer_oled.png)
+
+## Simulation
+
+[Accéder à une simulation (ESP32-S3)](https://wokwi.com/projects/479410843382348801)
