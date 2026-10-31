@@ -41,12 +41,13 @@ void loop() {
   display.drawRect(SCREEN_WIDTH * .1, SCREEN_HEIGHT * .1, SCREEN_WIDTH * .8, SCREEN_HEIGHT * .3, WHITE); // Contour de la jauge
   display.fillRect(SCREEN_WIDTH * .1 + 2, SCREEN_HEIGHT * .1 + 2, (SCREEN_WIDTH * .8 - 4) * ratio, SCREEN_HEIGHT * .3 - 4, WHITE); // Remplissage de la jauge en fonction du pourcentage
 
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(SCREEN_WIDTH * .2, SCREEN_HEIGHT * .5);
-  display.println("Tension:" + String(tension, 2) + " V");
-  display.setCursor(0, SCREEN_HEIGHT * .75);
-  display.println("Binaire:" + motBinaire);
-  display.display();
-  delay(100);
+  // Formatage du texte et affichage de la tension et du mot binaire
+  display.setTextSize(1); // Taille
+  display.setTextColor(WHITE); // Couleur
+  display.setCursor(SCREEN_WIDTH * .2, SCREEN_HEIGHT * .5); // Position du texte
+  display.println("Tension:" + String(tension, 2) + " V"); // Affichage de la tension avec 2 décimales
+  display.setCursor(0, SCREEN_HEIGHT * .75); // Position du second texte
+  display.println("Binaire:" + motBinaire); // Affichage du mot binaire
+  display.display(); // Mise à jour de l'affichage
+  delay(100); // Mise à jour toutes les 0.1 secondes pour voir le remplissage de la jauge en temps réel
 }
